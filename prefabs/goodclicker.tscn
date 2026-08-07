@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://clil4rjv0rjo2"]
+
+[ext_resource type="Texture2D" uid="uid://bhf4c66pvwmwo" path="res://assets/clicker.png" id="1_i6ak4"]
+[ext_resource type="Script" uid="uid://uh24ieqw30sc" path="res://scripts/clicker.gd" id="2_jjjci"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xyvdq"]
+radius = 120.266
+
+[node name="goodclicker" type="Sprite2D" unique_id=2076478721]
+texture_filter = 4
+rotation = 1.5707964
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_i6ak4")
+script = ExtResource("2_jjjci")
+is_good = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1039448224]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1862777507]
+position = Vector2(4, 0)
+shape = SubResource("CircleShape2D_xyvdq")
+
+[node name="good" type="Node2D" parent="." unique_id=976404763]
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

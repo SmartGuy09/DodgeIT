@@ -1,0 +1,246 @@
+[gd_scene format=3 uid="uid://c5l2jvl0waiee"]
+
+[ext_resource type="Texture2D" uid="uid://cp7nrh4iodao6" path="res://assets/bg.png" id="1_3qx2c"]
+[ext_resource type="Script" uid="uid://da4pvscxi77fy" path="res://scripts/spawner.gd" id="2_33ady"]
+[ext_resource type="Script" uid="uid://xx4db4y01kwb" path="res://scenes/label.gd" id="3_4vge2"]
+[ext_resource type="Script" uid="uid://suve3a3fr2je" path="res://scripts/game_manager.gd" id="3_rnjyy"]
+[ext_resource type="Texture2D" uid="uid://bcsfu1juxi7sy" path="res://assets/Untitled.png" id="5_04qyp"]
+[ext_resource type="Texture2D" uid="uid://c012c1v02jrnp" path="res://assets/exit icon.png" id="5_j7wrs"]
+
+[sub_resource type="SystemFont" id="SystemFont_60i0e"]
+font_names = PackedStringArray("Bauhaus 93")
+
+[sub_resource type="LabelSettings" id="LabelSettings_04qyp"]
+font = SubResource("SystemFont_60i0e")
+font_size = 40
+font_color = Color(1, 0.37283427, 0.2502441, 1)
+outline_size = 23
+shadow_size = 11
+shadow_color = Color(0, 0, 0, 0.16470589)
+shadow_offset = Vector2(0, 7.37)
+
+[sub_resource type="LabelSettings" id="LabelSettings_j7wrs"]
+font = SubResource("SystemFont_60i0e")
+font_size = 40
+font_color = Color(1, 0.37283427, 0.2502441, 1)
+shadow_size = 11
+shadow_color = Color(0, 0, 0, 0.16470589)
+shadow_offset = Vector2(0, 7.37)
+
+[sub_resource type="SystemFont" id="SystemFont_wj18i"]
+font_names = PackedStringArray("Bauhaus 93")
+
+[sub_resource type="Theme" id="Theme_04qyp"]
+default_font = SubResource("SystemFont_wj18i")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fws66"]
+bg_color = Color(1, 0.37254903, 0.2509804, 1)
+border_width_bottom = 10
+border_color = Color(0.41299912, 0.14645126, 0.10153312, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0, 0, 0, 0.3372549)
+shadow_size = 11
+shadow_offset = Vector2(0, 7.37)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j7wrs"]
+bg_color = Color(0.78175306, 0.15432858, 0, 1)
+border_width_bottom = 2
+border_color = Color(0.41299912, 0.14645126, 0.10153312, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0, 0, 0, 0.3372549)
+shadow_size = 11
+shadow_offset = Vector2(0, 7.37)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04qyp"]
+bg_color = Color(1, 0.4898193, 0.38578582, 1)
+border_width_bottom = 10
+border_color = Color(0.41299912, 0.14645126, 0.10153312, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0, 0, 0, 0.3372549)
+shadow_size = 11
+shadow_offset = Vector2(0, 7.37)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hh0fu"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3m5ht"]
+bg_color = Color(1.3837591e-07, 0.09181116, 0.13849726, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dubn7"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="SystemFont" id="SystemFont_460fr"]
+font_names = PackedStringArray("Bauhaus 93")
+
+[sub_resource type="LabelSettings" id="LabelSettings_4dvvg"]
+font = SubResource("SystemFont_460fr")
+font_size = 40
+outline_size = 3
+outline_color = Color(0.06053035, 0.06053035, 0.060530342, 1)
+
+[node name="Node2D" type="Node2D" unique_id=1331463051]
+metadata/_edit_horizontal_guides_ = [19.0]
+
+[node name="GameManager" type="Node2D" parent="." unique_id=872507329]
+z_index = -9
+script = ExtResource("3_rnjyy")
+
+[node name="Spawner" type="Node2D" parent="." unique_id=1114263429]
+z_index = 5
+position = Vector2(189, 419)
+scale = Vector2(1.2, 1)
+script = ExtResource("2_33ady")
+
+[node name="NodeL1" type="Node2D" parent="Spawner" unique_id=664842254]
+position = Vector2(-121.666664, -590)
+
+[node name="NodeL2" type="Node2D" parent="Spawner" unique_id=2075642963]
+position = Vector2(-45.833324, -589)
+
+[node name="NodeR1" type="Node2D" parent="Spawner" unique_id=1583165246]
+position = Vector2(29.16666, -589)
+
+[node name="NodeR2" type="Node2D" parent="Spawner" unique_id=372290939]
+position = Vector2(105.83333, -589)
+
+[node name="Control" type="Control" parent="." unique_id=472476439]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 363.0
+offset_bottom = 838.0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1494443809]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_3qx2c")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/TextureRect" unique_id=3967568]
+z_index = 7
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 62.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="GameOver" type="Label" parent="Control/TextureRect/HBoxContainer2" unique_id=457093705]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_04qyp")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="final score" type="Label" parent="Control/TextureRect/HBoxContainer2/GameOver" unique_id=2042912982]
+layout_mode = 0
+offset_left = 39.114563
+offset_top = 58.832825
+offset_right = 199.11456
+offset_bottom = 113.832825
+scale = Vector2(0.84381145, 0.6902018)
+text = "score"
+label_settings = SubResource("LabelSettings_j7wrs")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_4vge2")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Control/TextureRect/HBoxContainer2/GameOver/final score" unique_id=295888394]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006558315
+anchor_top = 1.2425138
+anchor_right = 1.0065583
+anchor_bottom = 2.3516047
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_04qyp")
+theme_override_colors/font_color = Color(0, 0.1764706, 0.25490198, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.12871832, 0.19096935, 1)
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_fws66")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j7wrs")
+theme_override_styles/hover = SubResource("StyleBoxFlat_04qyp")
+text = "Restart"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="Control" unique_id=1267439252]
+z_index = 6
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.07756563
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_04qyp")
+expand_mode = 1
+
+[node name="exit to menu" type="Button" parent="Control/TextureRect2" unique_id=164436054]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.80716264
+anchor_top = 0.18461539
+anchor_right = 0.920698
+anchor_bottom = 0.8186671
+offset_right = 66.78665
+offset_bottom = 66.78664
+scale = Vector2(0.3816052, 0.3816052)
+size_flags_horizontal = 4
+theme = SubResource("Theme_04qyp")
+theme_override_colors/icon_pressed_color = Color(0.47007585, 0.47007585, 0.47007585, 1)
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_hh0fu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3m5ht")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dubn7")
+icon = ExtResource("5_j7wrs")
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/TextureRect2" unique_id=1603366766]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.030303031
+anchor_top = 0.16923077
+anchor_right = 0.7107438
+anchor_bottom = 0.8923077
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Control/TextureRect2/HBoxContainer" unique_id=1362283951]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_4dvvg")
+vertical_alignment = 2
+script = ExtResource("3_4vge2")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Control/TextureRect/HBoxContainer2/GameOver/final score/Button" to="GameManager" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/TextureRect2/exit to menu" to="GameManager" method="_on_exit_to_menu_pressed"]

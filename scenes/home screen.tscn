@@ -1,0 +1,423 @@
+[gd_scene format=3 uid="uid://dci6gtef6jf67"]
+
+[ext_resource type="Script" uid="uid://suve3a3fr2je" path="res://scripts/game_manager.gd" id="1_v73qh"]
+[ext_resource type="Texture2D" uid="uid://dnd6v7jvwdf3a" path="res://assets/lander.png" id="1_yk4d3"]
+[ext_resource type="Texture2D" uid="uid://waa78nyejn2g" path="res://assets/badclicker.png" id="2_tufsu"]
+[ext_resource type="Script" uid="uid://cljyvca0udfry" path="res://scenes/rules_window.gd" id="3_cr8fr"]
+[ext_resource type="Texture2D" uid="uid://csloiwoywo10r" path="res://assets/rules.png" id="4_7iee4"]
+[ext_resource type="Texture2D" uid="uid://xoiek7qna4jx" path="res://assets/info.png" id="4_juqih"]
+[ext_resource type="Texture2D" uid="uid://bpbt3vrhti1d3" path="res://assets/bin.png" id="4_sbphm"]
+[ext_resource type="Script" uid="uid://cy3l4kgp7lxms" path="res://scenes/highscore_label.gd" id="6_rd3h3"]
+[ext_resource type="Texture2D" uid="uid://leq2ton1q6g0" path="res://assets/warning.png" id="8_d43x1"]
+
+[sub_resource type="SystemFont" id="SystemFont_tufsu"]
+font_names = PackedStringArray("Bauhaus 93")
+
+[sub_resource type="Theme" id="Theme_v73qh"]
+default_font = SubResource("SystemFont_tufsu")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tufsu"]
+bg_color = Color(0.8174568, 1.0842435, 0.9233245, 1)
+border_width_bottom = 8
+border_color = Color(0.4947721, 0.66288584, 0.5614839, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v73qh"]
+bg_color = Color(3.152564e-05, 0.55436885, 0.41535082, 1)
+border_width_bottom = 5
+border_color = Color(0.34078074, 0.4865167, 0.399604, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_juqih"]
+bg_color = Color(0.7529412, 1, 0.8509804, 1)
+border_width_bottom = 8
+border_color = Color(0.44165748, 0.606443, 0.5073644, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 5
+
+[sub_resource type="SystemFont" id="SystemFont_7iee4"]
+font_names = PackedStringArray("Bauhaus 93")
+
+[sub_resource type="Theme" id="Theme_cr8fr"]
+default_font = SubResource("SystemFont_7iee4")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rd3h3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sbphm"]
+bg_color = Color(0, 0.09019608, 0.13725491, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d43x1"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="SystemFont" id="SystemFont_rd3h3"]
+font_names = PackedStringArray("ABC Ginto Nord Unlicensed Trial")
+
+[sub_resource type="FontVariation" id="FontVariation_sbphm"]
+base_font = SubResource("SystemFont_rd3h3")
+
+[sub_resource type="SystemFont" id="SystemFont_4vge2"]
+font_names = PackedStringArray("Bauhaus 93", "Berlin Sans FB")
+
+[sub_resource type="FontVariation" id="FontVariation_d43x1"]
+base_font = SubResource("SystemFont_4vge2")
+spacing_glyph = -17
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7iee4"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cr8fr"]
+load_path = "res://.godot/imported/cross.png-02546c5657ca18f075c4c5271ba2b0d0.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d43x1"]
+load_path = "res://.godot/imported/cross.png-02546c5657ca18f075c4c5271ba2b0d0.ctex"
+
+[sub_resource type="SystemFont" id="SystemFont_wj18i"]
+font_names = PackedStringArray("Bauhaus 93")
+
+[sub_resource type="Theme" id="Theme_vbtc5"]
+default_font = SubResource("SystemFont_wj18i")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w1xpy"]
+bg_color = Color(0.99607843, 0.4117647, 0.42745098, 1)
+border_width_bottom = 10
+border_color = Color(0.41299912, 0.14645126, 0.10153312, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0, 0, 0, 0.3372549)
+shadow_size = 11
+shadow_offset = Vector2(0, 7.37)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nyo4w"]
+bg_color = Color(0.9370328, 0.077703334, 0.23649848, 1)
+border_width_bottom = 2
+border_color = Color(0.41299912, 0.14645126, 0.10153312, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0, 0, 0, 0.3372549)
+shadow_size = 11
+shadow_offset = Vector2(0, 7.37)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fhwim"]
+bg_color = Color(1, 0.62975585, 0.6172866, 1)
+border_width_bottom = 10
+border_color = Color(0.41299912, 0.14645126, 0.10153312, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0, 0, 0, 0.3372549)
+shadow_size = 11
+shadow_offset = Vector2(0, 7.37)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tufsu"]
+bounce = 0.27
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tufsu"]
+radius = 23.85
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v73qh"]
+
+[node name="Node2D" type="Node2D" unique_id=2055709596]
+metadata/_edit_vertical_guides_ = [23.0, 63.0]
+
+[node name="GameManager" type="Node2D" parent="." unique_id=1667368851]
+z_index = -9
+position = Vector2(226, 657)
+script = ExtResource("1_v73qh")
+
+[node name="Control" type="Control" parent="." unique_id=723333303]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 360.0
+offset_bottom = 840.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=2087057645]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_vertical = 8
+texture = ExtResource("1_yk4d3")
+expand_mode = 1
+script = ExtResource("3_cr8fr")
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/TextureRect" unique_id=1578370522]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6
+anchor_top = 0.7797619
+anchor_right = 0.9361111
+anchor_bottom = 0.93333334
+offset_left = -1.5258789e-05
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="PlayButton" type="Button" parent="Control/TextureRect/HBoxContainer" unique_id=765436525]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_v73qh")
+theme_override_colors/font_color = Color(0, 0.1764706, 0.25490198, 1)
+theme_override_colors/font_pressed_color = Color(9.024516e-08, 0.08705247, 0.13518542, 1)
+theme_override_colors/font_hover_color = Color(3.85046e-07, 0.25631583, 0.3618017, 1)
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_tufsu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_v73qh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_juqih")
+text = "Play"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/TextureRect" unique_id=138125492]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08055554
+anchor_top = 0.9
+anchor_right = 0.18611111
+anchor_bottom = 0.9417446
+offset_top = -11.000061
+offset_right = 76.97328
+offset_bottom = 57.915527
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.29564962, 0.30165914)
+theme_override_constants/separation = 59
+alignment = 2
+
+[node name="info2" type="Button" parent="Control/TextureRect/VBoxContainer" unique_id=1258325030]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_cr8fr")
+theme_override_colors/icon_normal_color = Color(0.7529412, 1, 0.8509804, 1)
+theme_override_colors/icon_pressed_color = Color(0.47058824, 0.47058824, 0.47058824, 1)
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_rd3h3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sbphm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d43x1")
+icon = ExtResource("4_juqih")
+metadata/_edit_use_anchors_ = true
+
+[node name="HighscoreText" type="Label" parent="Control" unique_id=1058787496]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -270.0
+offset_right = 127.0
+offset_bottom = -203.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+theme_override_colors/font_color = Color(0, 0.12941177, 0.19215687, 0.45882353)
+theme_override_fonts/font = SubResource("FontVariation_sbphm")
+theme_override_font_sizes/font_size = 32
+text = "HIGHSCORE"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1923785717]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -384.0
+offset_right = 256.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HighscoreNumber" type="Label" parent="Control/HBoxContainer" unique_id=1725035007]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_color = Color(0, 0.12871832, 0.19096935, 1)
+theme_override_fonts/font = SubResource("FontVariation_d43x1")
+theme_override_font_sizes/font_size = 238
+text = "96"
+vertical_alignment = 2
+script = ExtResource("6_rd3h3")
+metadata/_edit_use_anchors_ = true
+
+[node name="ruleWindow" type="TextureRect" parent="Control" unique_id=33792853]
+z_index = 5
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.072222225
+anchor_top = 1.0357143
+anchor_right = 0.925
+anchor_bottom = 1.6190511
+offset_top = 21.0
+offset_bottom = 21.0
+texture = ExtResource("4_7iee4")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="crossButton" type="Button" parent="Control/ruleWindow" unique_id=193806794]
+z_index = 10
+layout_mode = 0
+offset_left = 130.0
+offset_top = 344.0
+offset_right = 241.0
+offset_bottom = 457.0
+scale = Vector2(0.43639758, 0.43639758)
+size_flags_vertical = 3
+theme_override_colors/icon_normal_color = Color(0.78254586, 0.99999994, 0.86741805, 1)
+theme_override_colors/icon_pressed_color = Color(0.39816722, 0.51462185, 0.44263172, 1)
+theme_override_colors/icon_hover_color = Color(0.86632675, 0.99999994, 0.91510826, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_7iee4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7iee4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7iee4")
+icon = SubResource("CompressedTexture2D_cr8fr")
+
+[node name="delete" type="Button" parent="Control" unique_id=179390388]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08055556
+anchor_top = 0.83333343
+anchor_right = 0.18739277
+anchor_bottom = 0.87883496
+offset_top = -11.000061
+offset_right = 161.5386
+offset_bottom = 150.77863
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.17202264, 0.17094892)
+theme = SubResource("Theme_cr8fr")
+theme_override_colors/icon_normal_color = Color(0.7529412, 1, 0.8509804, 1)
+theme_override_colors/icon_pressed_color = Color(0.47058824, 0.47058824, 0.47058824, 1)
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_rd3h3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sbphm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d43x1")
+icon = ExtResource("4_sbphm")
+
+[node name="warnWin" type="TextureRect" parent="Control" unique_id=1330982240]
+z_index = 5
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.07777778
+anchor_top = -0.6730026
+anchor_right = 0.9222222
+anchor_bottom = -0.05675928
+offset_top = 65.322205
+offset_bottom = 65.322205
+grow_horizontal = 2
+texture = ExtResource("8_d43x1")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="crossButton" type="Button" parent="Control/warnWin" unique_id=1859532377]
+z_index = 10
+layout_mode = 0
+anchor_left = 0.43092105
+anchor_top = 0.48744312
+anchor_right = 0.59026355
+anchor_bottom = 0.5827072
+offset_right = 62.559875
+offset_bottom = 63.687073
+scale = Vector2(0.43639758, 0.43639758)
+size_flags_vertical = 3
+theme_override_colors/icon_normal_color = Color(0.9985232, 0.63024104, 0.62116075, 1)
+theme_override_colors/icon_pressed_color = Color(0.56078434, 0.21568628, 0.18431373, 1)
+theme_override_colors/icon_hover_color = Color(0.9982334, 0.580404, 0.5738525, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_7iee4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7iee4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7iee4")
+icon = SubResource("CompressedTexture2D_d43x1")
+metadata/_edit_use_anchors_ = true
+
+[node name="deleteHighscore" type="Button" parent="Control/warnWin" unique_id=888558613]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -71.0
+offset_top = -104.5
+offset_right = 71.0
+offset_bottom = -41.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_vbtc5")
+theme_override_colors/font_color = Color(0, 0.1764706, 0.25490198, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.12871832, 0.19096935, 1)
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxFlat_w1xpy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nyo4w")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fhwim")
+text = "delete"
+
+[node name="BalRed" type="RigidBody2D" parent="." unique_id=268495777]
+position = Vector2(80, -500)
+rotation = 1.5707964
+physics_material_override = SubResource("PhysicsMaterial_tufsu")
+
+[node name="badclicker" type="Sprite2D" parent="BalRed" unique_id=1094814143]
+texture_filter = 4
+rotation = 0.6457718
+scale = Vector2(0.21194747, 0.21194747)
+texture = ExtResource("2_tufsu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BalRed" unique_id=987762668]
+shape = SubResource("CircleShape2D_tufsu")
+
+[node name="Platforms" type="Node2D" parent="." unique_id=1765442548]
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Platforms" unique_id=2036471501]
+position = Vector2(108.00001, 608)
+rotation = 0.13962634
+scale = Vector2(6.0259137, -1.3155818)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D3" unique_id=1584262791]
+shape = SubResource("RectangleShape2D_v73qh")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Platforms" unique_id=870759170]
+position = Vector2(138.00003, 592)
+rotation = -1.1572815
+scale = Vector2(6.0259137, -1.3155818)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D4" unique_id=1964189279]
+shape = SubResource("RectangleShape2D_v73qh")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Platforms" unique_id=1090029850]
+position = Vector2(70.00003, 588.0001)
+rotation = -1.7929991
+scale = Vector2(6.0259137, -1.3155818)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D5" unique_id=1551985336]
+shape = SubResource("RectangleShape2D_v73qh")
+
+[connection signal="pressed" from="Control/TextureRect/HBoxContainer/PlayButton" to="GameManager" method="_on_play_button_pressed"]
+[connection signal="pressed" from="Control/TextureRect/VBoxContainer/info2" to="Control/TextureRect" method="_on_info_pressed"]
+[connection signal="pressed" from="Control/ruleWindow/crossButton" to="Control/TextureRect" method="_on_cross_button_pressed"]
+[connection signal="pressed" from="Control/delete" to="Control/TextureRect" method="_on_delete_pressed"]
+[connection signal="pressed" from="Control/warnWin/crossButton" to="Control/TextureRect" method="_on_cross_button_pressed"]
+[connection signal="pressed" from="Control/warnWin/deleteHighscore" to="Control/TextureRect" method="_on_delete_highscore_pressed"]
